@@ -17,7 +17,8 @@ html {
   
   
   /* ---- typography ---- */
-  
+ 
+
   body {
     color: #111;
     font-family: Helvetica, Arial, sans-serif;
@@ -36,15 +37,61 @@ html {
     margin-top: 0;
     margin-left: 0;
     color: #323648;
+    padding-top: 30px;
   }
   
-  h2 {}
+  h2 {
+    color: #323648;
+  }
+
+  h2.buena-com{
+    color: #323648;
+    text-align: center;
+    font-family: Slack-Tiempos,"Times New Roman",Georgia,serif;
+    font-weight: 600;
+    line-height: 1.2;
+    font-size: 1.63rem;
+    margin-bottom: 1rem;
+    margin-top: 10px;
+  }
   
-  h3 {}
+  h3 {
+    margin: 0 ;
+  }
+
+  h3.box-descr{
+    font-family: 'Merriweather', serif;
+    font-weight: 600;
+    line-height: 1.45;
+    font-size: 1.3rem;
+    color: #323648;
+    margin: .25rem 0 1rem;
+  }
+
+  h3.bac-sec-tit{
+    font-family: 'Merriweather', serif;;
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    
+  }
+  h4.sec-with-line {
+    border-bottom: 1px solid #3f46ad;
+    font-weight: 600;
+    line-height: 1.2;
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 0;
+    color:#3f46ad;
+    text-align: center;
+  }
   
   p {
     color: #5b5e6d;
     font-family: Slack-Averta,appleLogo,sans-serif;
+    margin: 0 ;
   }
     
     
@@ -55,11 +102,58 @@ html {
     font-size: 1.0625rem;
     margin-bottom: 32px;
   }
-  div{
-    margin-bottom: 16px;
+  
+  p.p-list{
+    font-family: Slack-Averta,appleLogo,sans-serif;
+    line-height: 1.5;
+    letter-spacing: normal;
+    font-size: 1rem;
+    color: #323648;
+    margin-bottom: .5rem;
+    font-weight: 700;
+    
+  }
+
+  p.p-list-des{
+    font-family: Slack-Averta,appleLogo,sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: normal;
+    font-size: 1rem;
+    margin-bottom: 0;
   }
   
+  p.buea-com-des{
+    font-family: Slack-Averta,appleLogo,sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #5b5e6d;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  a.box-sec{
+    text-decoration: none;
+    color: #323648;
+  }
+
+  a.list-a{
+    text-decoration: none;
+  }
+
+  span.box-title{
+    font-family: Slack-Averta,appleLogo,sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #323648;
+    }
   
+    ul.list-styl{
+      list-style: none;
+      
+    }
+
   /* ---- layout ---- */
   
   #site-header {
@@ -79,7 +173,7 @@ html {
   }
   
   .container {
-    padding: 0 30px;
+    padding: 0 8%;
     
   }
   
@@ -88,16 +182,39 @@ html {
     padding-top: 20px;
   }
   
+  
+  .back-sec{
+    background-image: url("https://a.slack-edge.com/1fd8/spacesuit/source/images/backgrounds/bg_halftone_black_20p@2x.png");
+    background-size: 1300px 700px;
+    background-repeat: repeat;
+    background-color: #3f46ad;
+    display: block;
+    align-items: center;
+    height: 370px;
+    text-align: center;
+  }
+
+ 
+  #why-us {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
   @media (min-width: 768px) {
     .container {
       max-width: 728px;
       margin: 0 auto;
     }
   }
-  .home-page-im{
-    margin-top: 48px;
-  }
+
+  @media (min-width: 992px) {
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
   
+  }
+ 
   
   
   /* ---- components ---- */
@@ -126,11 +243,21 @@ html {
     background-color: #fff;
   }
 
+  button.bac-sec-but{
+    color:#1c299d;
+    background-color: #fff;
+    text-align: center;
+  }
+
   img{
     max-width: 100%;
   }
   img.logo {
       width: 40%;
+  }
+
+  img.img-sl-log{
+    width:20%;
   }
   
   img.menu{
@@ -143,26 +270,83 @@ html {
     max-height: 300px;
     width: auto;
     align-self: center;
-    height: 300px;
+   
   }
 
   img.box-im{
     object-fit: cover;
     width: 100%;
     height: 100%;
+    top: 50%;
   }
+
+
   /* ---- section ---- */
+
+  
   
   section.testimonials {
-    // ...
+    
   }
   
   section.testimonials .button {
     margin-bottom: 10px;
   }
 
+
+
   div.box{
     box-shadow: 0 0 2rem rgba(0,0,0,.1);
     border: none;
   }
   
+  div{
+    margin-bottom: 16px;
+  }
+  div.home-page-im{
+    margin-top: 48px;
+    margin-bottom: 0px;
+  }
+
+  div.box-sec-in{
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-bottom: 24px;
+    padding-right: 64px;
+    margin: 0 ;
+  }
+
+  div.bax-bottom{
+    padding: 24px;
+    color: #3f46ad;
+    font-family: Slack-Averta,appleLogo,sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  div.im-logo-com{
+    max-width: 140px;
+    margin: 10px;
+    text-align: center;
+    margin-top: 11px;
+  }
+
+  div.logo-zone{
+    align-items: center;
+  }
+
+  div.back-cont{
+    text-align: center;
+    padding: 0 8vw;
+    margin: auto;
+  }
+
+  div.list-im{
+    margin-top: 20px;
+  }
+
+  article.why-us-article{
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
