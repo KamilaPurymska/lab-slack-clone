@@ -42,6 +42,8 @@ html {
   
   h2 {
     color: #323648;
+    font-family: Slack-Tiempos,"Times New Roman",Georgia,serif;
+    font-size: 1.625rem;
   }
 
   h2.buena-com{
@@ -77,21 +79,25 @@ html {
     text-align: center;
     
   }
-  h4.sec-with-line {
+  h4.sec-w-l{
+    text-align: center;
+  }
+
+  a.sec-with-line {
     border-bottom: 1px solid #3f46ad;
     font-weight: 600;
     line-height: 1.2;
     font-size: 1rem;
-    display: inline-block;
     margin-bottom: 0;
     color:#3f46ad;
-    text-align: center;
+    text-decoration: none;
   }
   
   p {
     color: #5b5e6d;
     font-family: Slack-Averta,appleLogo,sans-serif;
     margin: 0 ;
+    font-family: 'Montserrat', sans-serif;
   }
     
     
@@ -101,10 +107,11 @@ html {
     letter-spacing: normal;
     font-size: 1.0625rem;
     margin-bottom: 32px;
+    font-family: 'Montserrat', sans-serif;
   }
   
   p.p-list{
-    font-family: Slack-Averta,appleLogo,sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     letter-spacing: normal;
     font-size: 1rem;
@@ -115,7 +122,7 @@ html {
   }
 
   p.p-list-des{
-    font-family: Slack-Averta,appleLogo,sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: normal;
@@ -124,12 +131,19 @@ html {
   }
   
   p.buea-com-des{
-    font-family: Slack-Averta,appleLogo,sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     line-height: 1.5;
     color: #5b5e6d;
     text-align: center;
     margin-bottom: 20px;
+  }
+
+  p.foot-title{
+    font-weight: 800;
+    line-height: 1.5;
+    text-transform: uppercase;
+
   }
 
   a.box-sec{
@@ -139,6 +153,9 @@ html {
 
   a.list-a{
     text-decoration: none;
+    color: #6d6f7b;
+    font-family: 'Montserrat', sans-serif;
+  
   }
 
   span.box-title{
@@ -151,11 +168,81 @@ html {
   
     ul.list-styl{
       list-style: none;
+      padding: 0;
+      margin: 10px 0 20px 0;
+    }
+
+    ul.list-last{
+      text-align: center;
+      width:100%;
+      align-items: center;
+      
+    }
+    @media (min-width: 48rem) {
+    .last-sec .list-styl .list-last {
+      width: auto;
+      margin-left: 0;
+    }
+  }
+
+    ul.last{
+      float: left;
+      width: 100%;
       
     }
 
+    @media (min-width: 48rem){
+      ul.last{
+    margin-top: 0;
+    margin-right: 0;
+    float: right;
+      }
+    }
+
+    li.list-item{
+      padding: 8px 0 8px 0;
+      font-size: 13px;
+    }
+    li.list-last-block{
+      display: inline-block;
+      color: #6d6f7b;
+      font-weight: 600;
+      font-size: .875rem; 
+      vertical-align: middle;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    li.espanol{
+      color: #6d6f7b;
+      font-weight: 600;
+      font-size: .875rem; 
+      font-family: 'Montserrat', sans-serif;
+    }
+    @media (min-width: 48rem){
+      .espanol
+     {
+    display: inline-block;
+    vertical-align: bottom;
+    width: auto;
+     }}
+
+     li.social{
+       display: inline-block;
+     }
+
   /* ---- layout ---- */
+  nav{
+    margin: 0 20px 20px 20px;
+    display: grid;
+    grid-template-columns: 120px auto 30px;
+    grid-template-areas: 
+      "logo1 . img1";
+  }
   
+  #header{
+    margin-bottom: 30px;
+    }
+  }
   #site-header {
     padding: 30px 0;
     color: white;
@@ -174,7 +261,11 @@ html {
   
   .container {
     padding: 0 8%;
-    
+    margin: 0 auto;
+  }
+
+  div.head-cont{
+    display: block;
   }
   
   .section {
@@ -188,8 +279,7 @@ html {
     background-size: 1300px 700px;
     background-repeat: repeat;
     background-color: #3f46ad;
-    display: block;
-    align-items: center;
+    display: flex;
     height: 370px;
     text-align: center;
   }
@@ -207,16 +297,104 @@ html {
     }
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 1024px) {
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
     }
   
   }
  
+  @media (min-width: 1024px) {
+    div.head-cont{
+      display: grid;
+      grid-template-columns: 48% 48%;
+      grid-column-gap: 4%;
+      text-align: left;
+      grid-template-areas:
+        "img6 text2" 
+  }
+}
+
+    div.head-flex{
+      grid-area: text2;
+    }
+    div.img-head{
+      grid-area: img6;
+    }
   
-  
+  @media (min-width: 1024px) {
+    div.four-sec{
+      display: grid;
+      grid-template-columns: 48% 48%;
+      grid-column-gap: 4%;
+      text-align: left;
+      grid-template-areas:
+        "canales busqueda" 
+        "integra seguri"
+  }
+}
+
+  .canales{
+    grid-area: canales;
+  }
+
+  .busqueda{
+    grid-area: busqueda;
+  }
+  .integra{
+    grid-area: integra;
+  }
+
+  .seguri{
+    grid-area: seguri;
+  }
+
+  @media (min-width: 1024px) {
+    div.box-columns{
+      display: grid;
+      grid-template-columns: 48% 48%;
+      grid-column-gap: 4%;
+      grid-template-areas:
+        "box1 box2" 
+  }
+}
+
+  div.box1{
+    grid-area: box1;
+  }
+
+  div.box2{
+    grid-area: box2;
+  }
+
+  @media (min-width: 1024px) {
+    div.foot-column{
+      display: grid;
+      align-items: right;
+      grid-template-columns: 16% 16% 16% 16%;
+      grid-column-gap: 2%;
+      grid-template-areas:
+        "de1 de2 de3 de4" 
+  }
+}
+
+div.de1{
+  grid-area: de1;
+}
+div.de2{
+  grid-area: de2;
+}
+div.de3{
+  grid-area: de3;
+}
+div.de4{
+  grid-area: de4;
+}
+
+
+
+
   /* ---- components ---- */
   
   button {
@@ -225,7 +403,7 @@ html {
     color: #fff;
     border: none;
     border-radius: 4px;
-    font-family: Slack-Averta,appleLogo,sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     line-height: 1.3;
     letter-spacing: normal;
@@ -253,17 +431,19 @@ html {
     max-width: 100%;
   }
   img.logo {
-      width: 40%;
+      width: 100%;
+      grid-area: logo1;
   }
 
   img.img-sl-log{
     width:20%;
+    margin: 20px 0 20px 0;
   }
   
-  img.menu{
-    width: 10%;
-    float: right;
-    margin-top:20px;
+  a.menu{
+    width: 80%;
+    grid-area: img1;
+    align-self: center;
   }
 
   img.home-page{
@@ -279,11 +459,13 @@ html {
     height: 100%;
     top: 50%;
   }
-
+svg.facebook, svg.twitter,  svg.youtube, svg.linkedin{
+  fill: #6d6f7b;
+}
 
   /* ---- section ---- */
 
-  
+
   
   section.testimonials {
     
@@ -293,7 +475,9 @@ html {
     margin-bottom: 10px;
   }
 
-
+section#languages {
+  background-color: #f5f5f5;
+}
 
   div.box{
     box-shadow: 0 0 2rem rgba(0,0,0,.1);
@@ -333,6 +517,9 @@ html {
   }
 
   div.logo-zone{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
   }
 
@@ -344,9 +531,23 @@ html {
 
   div.list-im{
     margin-top: 20px;
+    display: inline;
   }
+
+  div.last-sec{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    clear: both;
+  }
+  
+  @media (min-width: 48rem){
+  text-align: left;
+}
 
   article.why-us-article{
     padding-top: 16px;
     padding-bottom: 16px;
   }
+  
+ 
